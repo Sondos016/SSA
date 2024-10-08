@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSA</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: rgb(47, 28, 117);
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        #hiddenMessage {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome To The International Space Sataion</h1>
+    <p>Type the code number to reveal a hidden message.</p>
+    <input type="text" id="codeInput" placeholder="Enter code number">
+    <button onclick="checkCode()">Submit</button>
+    <p id="hiddenMessage">You Did it And You Become The Best Mathematics Teacher in The World! A message from space.</p>
+
+    <script>
+        function checkCode() {
+            const code = document.getElementById('codeInput').value;
+            if (code === '499.71') {
+                document.getElementById('hiddenMessage').style.display = 'block';
+            } else {
+                alert('Incorrect code. Try again!');
+            }
+        }
+    </script>
+</body>
+</html>
